@@ -1,0 +1,50 @@
+{
+  "name": "10up-tokens",
+  "author": {
+    "name": "10up",
+    "email": "info@10up.com",
+    "url": "https://10up.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10up/10up-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/10up/10up-tokens/issues"
+  },
+  "homepage": "https://github.com/10up/10up-tokens#readme",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "source": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "format-js": "10up-toolkit format-js",
+    "lint-js": "10up-toolkit lint-js",
+    "test": "10up-toolkit test-unit-jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@10up/eslint-config"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cross-fetch": "^3.1.4",
+    "dotenv": "^10.0.0",
+    "style-dictionary": "^3.0.3"
+  },
+  "devDependencies": {
+    "10up-toolkit": "^1.0.13",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6"
+  },
+  "description": "Design token generation for 10up projects.",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.9"
+  }
+}
